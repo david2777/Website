@@ -1,0 +1,310 @@
+@charset "utf-8";
+/* TODO: Clean this stuff up */
+
+img, object, embed, video {
+	max-width: 100%;
+}
+
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+body{
+	background-color:#d8d8d8;
+	color:#323232;
+	font: normal normal Verdana, Geneva, sans-serif;
+}
+
+
+.fluid {
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	float: left;
+	display: block;
+}
+
+.fluidList {
+    list-style:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;
+}
+
+
+/* Mobile Layout: 480px and below. */
+
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 86.45%;
+	padding-left: 2.275%;
+	padding-right: 2.275%;
+	clear: none;
+	float: none;
+}
+#header {
+	width: 100%;
+}
+#header h1{
+	font: italic bolder 24pt Verdana, Geneva, sans-serif;
+	letter-spacing: -1.5px;
+	padding: 5px 0px 0px 0px;
+}
+#header h1 a{
+	text-decoration:none;
+	color:#323232;
+}
+#subheader {
+	width: 73.6842%;
+	margin-left: 26.3157%;
+}
+#subheader h2{
+	font:italic lighter 12pt Verdana, Geneva, sans-serif;
+	margin-top:-20px;
+}
+#nav {
+	width: 100%;
+	margin:0, auto;
+	text-align:center;
+}
+#nav ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+#nav li{
+	display: inline;
+}
+#video_wrapper a{
+	/*text-decoration:none;*/
+	color:#323232;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bold;
+}
+#video_wrapper a:hover{
+	color:#737373;
+}
+#video_wrapper a:active{
+	color:#ed5614;
+}
+#nav li a{
+	text-decoration:none;
+	color:#323232;
+	font-family:Verdana, Geneva, sans-serif;
+}
+#nav li a:hover{
+	color:#737373;
+}
+#nav li a:active{
+	color:#ed5614;
+}
+#video {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+}
+#video iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+#video_wrapper {
+	padding-top:25px;
+	font-size:10px;
+}
+#foooter {
+	padding-top:25px;
+	text-align:right;
+	font: normal normal 10pt Verdana, Geneva, sans-serif;
+}
+#resumeWrapper{
+	width: 100%;
+	margin: 0 auto;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border: 3px solid #000000;
+}
+#resume{
+	width: 95%;
+	margin: 0 auto;
+	font-family:Verdana, Geneva, sans-serif;
+	float: none;
+}
+#resume a{
+	font-weight:bold;
+	text-decoration:none;
+	color:#ed5614;
+}
+#resume a:hover{
+	color:#323232;
+}
+#resume a:active{
+	color:#737373;
+}
+#resumeHeader{
+	text-align:center;
+}
+#resumeTable{
+	width: 100%;
+	margin: 0 auto;
+	float: none;
+	padding-bottom: 25px;
+}
+#resumeTable table{
+	width: 100%;
+	border: 0px;
+}
+#resumeEduTable{
+	padding-left: 10px;
+}
+#contact {
+	font: normal normal 12pt Verdana, Geneva, sans-serif;
+	text-align:center;
+
+}
+#contact h2 {
+	font: normal normal 16pt Verdana, Geneva, sans-serif;
+}
+#contact a{
+	font-weight:bold;
+	text-decoration:none;
+	color:#323232;
+}
+#contact a:hover{
+	color:#737373;
+}
+#contact a:active{
+	color:#ed5614;
+}
+.icon {
+	clear:both;
+	float:right;
+	padding-top: 25px;
+	width: 50%;
+}
+.zeroMargin_mobile {
+margin-left: 0;
+}
+.hide_mobile {
+display: none;
+}
+
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+	.gridContainer {
+		width: 89.9%;
+		padding-left: 1.55%;
+		padding-right: 1.55%;
+		clear: none;
+		float: none;
+		margin-left: auto;
+	}
+	#header {
+		width: 100%;
+	}
+	#header h1{
+		font: italic bolder 36pt Verdana, Geneva, sans-serif;
+		letter-spacing: -1.5px;
+		padding: 12px 0px 0px 0px;
+	}
+	#subheader {
+		width: 65.5172%;
+		margin-left: 34.4827%;
+	}
+	#subheader h2{
+		font:italic lighter 16pt Verdana, Geneva, sans-serif;
+		margin-top:-30px;
+	}
+	#nav {
+		width: 82.7586%;
+		text-align:right;
+		float:right;
+		font-size:16pt;
+		padding-top:8px;
+	}
+	#video_wrapper {
+		font-size:12px;
+	}
+	#contact {
+		text-align:left;
+	}
+	#contact h2 {
+		font: normal normal 18pt Verdana, Geneva, sans-serif;
+	}
+	.icon {
+		width: 50%;
+	}
+	.hide_tablet {
+		display: none;
+	}
+	.zeroMargin_tablet {
+		margin-left: 0;
+	}
+}
+
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+	.gridContainer {
+		width: 87.75%;
+		max-width: 1232px;
+		padding-left: 1.125%;
+		padding-right: 1.125%;
+		margin: auto;
+		clear: none;
+		float: none;
+		margin-left: auto;
+	}
+	#header {
+		width: 48.7179%;
+	}
+	#header h1{
+		font: italic bolder 40pt Verdana, Geneva, sans-serif;
+		letter-spacing: -1.5px;
+		padding: 17px 0px 0px 0px;
+	}
+	#subheader {
+		width: 48.7179%;
+		margin-left: 25.641%;
+	}
+	#subheader h2{
+		font:italic lighter 20pt Verdana, Geneva, sans-serif;
+		margin-top:-40px;
+	}
+	#nav {
+		width: 100%;
+		font-size:20pt;
+		padding-right:5%;
+	}
+	#video_wrapper {
+		font-size:15px;
+	}
+	#resumeTable{
+		width: 90%;
+		margin: 0 auto;
+	}
+	#resume{
+		width: 90%;
+	}
+	#contact h2{
+		font: normal normal 20pt Verdana, Geneva, sans-serif;
+	}
+	.icon {
+		width: 25%;
+	}
+	.zeroMargin_desktop {
+	margin-left: 0;
+	}
+	.hide_desktop {
+	display: none;
+	}
+}
