@@ -38,17 +38,6 @@ img, object, embed, video {
 	clear: none;
 	float: none;
 }
-.icon {
-	clear: both;
-	float: right;
-	padding-top: 25px;
-	width: 50%;
-}
-.icon a img {
-	float: left;
-	width: 14%;
-	padding-right: 5px;
-}
 .zeroMargin_mobile {
 	margin-left: 0;
 }
@@ -73,7 +62,7 @@ img, object, embed, video {
 	margin-top: -20px;
 }
 #nav {
-	margin: 0, auto;
+	margin: 0 auto;
 	text-align: center;
 }
 #nav ul {
@@ -95,6 +84,20 @@ img, object, embed, video {
 #nav li a:active {
 	color: #ed5614;
 }
+#icon {
+	margin: 0 auto;
+	text-align: right;
+}
+#icon ul {
+	list-style-type: none;
+}
+#icon li {
+	display: inline;
+}
+#icon a img {
+	padding-left: 5px;
+	width: 15%;
+}
 #foooter {
 	padding-top: 25px;
 	text-align: right;
@@ -105,6 +108,7 @@ img, object, embed, video {
 #video_wrapper {
 	padding-top: 25px;
 	font-size: 10px;
+	display: inline;
 }
 #video_wrapper a {
 	color: #323232;
@@ -122,6 +126,7 @@ img, object, embed, video {
 	padding-bottom: 56.25%;
 	height: 0;
 	overflow: hidden;
+	margin-bottom: 5px;
 }
 #video iframe {
 	position: absolute;
@@ -133,10 +138,13 @@ img, object, embed, video {
 
 /*Resume*/
 #resumeWrapper {
+	width: 100%;
 	margin: 0 auto;
-	border-radius: 10px 10px 10px 10px;
-	-moz-border-radius: 10px 10px 10px 10px;
-	-webkit-border-radius: 10px 10px 10px 10px;
+	float: none;
+	padding: 10px 0px;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
 	border: 2px solid #000000;
 }
 #resume {
@@ -179,7 +187,7 @@ img, object, embed, video {
 	text-align: center;
 }
 #contact h2 {
-	font: normal normal 16pt Verdana, Geneva, sans-serif;
+	font: normal normal 12pt Verdana, Geneva, sans-serif;
 }
 #contact a {
 	font-weight: bold;
@@ -212,12 +220,6 @@ img, object, embed, video {
 	.zeroMargin_tablet {
 		margin-left: 0;
 	}
-	.icon {
-		width: 50%;
-	}
-	.icon a img {
-		width: 17.5%;
-	}
 	#header {
 		width: 100%;
 	}
@@ -241,10 +243,20 @@ img, object, embed, video {
 		font-size: 16pt;
 		padding-top: 8px;
 	}
-
+	#icon a img{
+		width: 10%;
+	}
 	/*Index*/
 	#video_wrapper {
 		font-size: 12px;
+	}
+	#video {
+		margin-bottom: 10px;
+	}
+
+	/*Resume*/
+	#resumeWrapper{
+		padding: 25px 0px;
 	}
 
 	/*Contact*/
@@ -252,7 +264,7 @@ img, object, embed, video {
 		text-align: left;
 	}
 	#contact h2 {
-		font: normal normal 18pt Verdana, Geneva, sans-serif;
+		font: normal normal 14pt Verdana, Geneva, sans-serif;
 	}
 }
 
@@ -278,9 +290,6 @@ img, object, embed, video {
 	.hide_desktop {
 	display: none;
 	}
-	.icon {
-		width: 25%;
-	}
 	#header {
 		width: 48.7179%;
 	}
@@ -302,18 +311,28 @@ img, object, embed, video {
 		font-size: 20pt;
 		padding-right: 5%;
 	}
+	#icon a img{
+		width: 60px;
+	}
 
 	/*Index*/
 	#video_wrapper {
 		font-size: 15px;
 	}
+	#video {
+		margin-bottom: 20px;
+	}
 
 	/*Contact*/
 	#contact h2 {
-		font: normal normal 20pt Verdana, Geneva, sans-serif;
+		font: normal normal 16pt Verdana, Geneva, sans-serif;
 	}
 
 	/*Resume*/
+	#resumeWrapper{
+		width: 85%;
+		padding: 50px 0px;
+	}
 	#resumeTable {
 		width: 90%;
 		margin: 0 auto;
