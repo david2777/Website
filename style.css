@@ -90,9 +90,13 @@ img, object, embed, video {
 }
 #icon ul {
 	list-style-type: none;
-}
-#icon li {
 	display: inline;
+	list-style-position: inside;
+}
+#icon ul li {
+	list-style-type: none;
+	display: inline;
+	list-style-position: inside;
 }
 #icon a img {
 	padding-left: 5px;
