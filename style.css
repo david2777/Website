@@ -5,6 +5,9 @@
 /*----------------------------------------------------------------------------*/
 
 /*All*/
+html {
+    overflow-y: scroll;
+}
 body {
 	background-color: #d8d8d8;
 	color: #323232;
@@ -118,12 +121,19 @@ img, object, embed, video {
 	color: #323232;
 	font-family: Verdana, Geneva, sans-serif;
 	font-weight: bold;
+	padding: 2px 2px 2px 2px;
+	border: 2px solid #323232;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
 }
 #video_wrapper a:hover {
 	color: #737373;
+	border: 2px solid #737373;
 }
 #video_wrapper a:active {
 	color: #ed5614;
+	border: 2px solid #ed5614;
 }
 #video {
 	position: relative;
@@ -138,6 +148,25 @@ img, object, embed, video {
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+#breakdown a {
+	color: #323232;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 2px 2px 2px 2px;
+	border: 2px solid #323232;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+}
+#breakdown a:hover {
+	color: #737373;
+	border: 2px solid #737373;
+}
+#breakdown a:active {
+	border: 2px solid #ed5614;
 }
 
 #breakdown_element{
@@ -194,13 +223,20 @@ img, object, embed, video {
 #resume a {
 	font-weight: bold;
 	text-decoration: none;
-	color: #ed5614;
+	color: #323232;
+	padding: 2px 2px 2px 2px;
+	border: 2px solid #323232;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
 }
 #resume a:hover {
-	color: #323232;
+	color: #737373;
+	border: 2px solid #737373;
 }
 #resume a:active {
-	color: #737373;
+	color: #ed5614;
+	border: 2px solid #ed5614;
 }
 #resumeHeader {
 	text-align: center;

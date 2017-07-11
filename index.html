@@ -15,6 +15,7 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
       <![endif]-->
       <script src="assets/respond.min.js"></script>
+      <script src="assets/show_hide.js"></script>
   </head>
 
   <body>
@@ -41,39 +42,42 @@
         <div id="video" class="fluid ">
           <iframe src="http://player.vimeo.com/video/122609527?color=ffffff" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
-        <a href="assets/David_DuVoisin_BreakdownSheet.pdf" target="_blank">Click here to download Breakdown Sheet as a PDF</a>
+        <a id="show_hide_button" onclick="show_hide()">Click Here To Show Breakdown</a>
       </div>
 
-      <div id="breakdown" class="fluid">
+      <div id="breakdown" class="fluid" style="display:none;">
         <div id="breakdown_element">
           <img src="assets/thumbnails/LegoCity.jpg" alt="Lego City Render" title="Lego City">
           <h3>Lego City</h3>
           <h4>Lighting, Rendering, Comp</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet erat ipsum. Proin aliquet orci luctus fermentum cursus. Vestibulum venenatis maximus ex vitae tincidunt. Vivamus dapibus lectus ut faucibus tincidunt. Cras nec egestas arcu, iaculis vehicula lorem. Aliquam luctus vehicula nisi, sit amet luctus justo. Donec semper nunc magna, ac tristique arcu tempus vel.</p>
+          <p>This Lego City project contained four short sequences, each in a different time of day. I was responsible for the mid-day and night sequences. For these sequences I created light rigs, did shot lighting, rendering, and compositing. For the night sequence light rig I wanted to have lights in each of the 30+ lamps. To make this setup easy I wrote a basic script to find each lamp head and setup the lights and geometry blockers for it. This script also made making changes easy when I had to add/remove lights/blockers. Lighting and rendering were handled in Redshift for Maya. Compositing was done in Blackmagic Fusion.</p>
         </div>
         <div id="breakdown_element">
           <img src="assets/thumbnails/LegoStarWars.jpg" alt="Lego Star Wars Render" title="Lego Star Wars">
           <h3>Lego Star Wars</h3>
           <h4>Lighting, Rendering, Comp</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet erat ipsum. Proin aliquet orci luctus fermentum cursus. Vestibulum venenatis maximus ex vitae tincidunt. Vivamus dapibus lectus ut faucibus tincidunt. Cras nec egestas arcu, iaculis vehicula lorem. Aliquam luctus vehicula nisi, sit amet luctus justo. Donec semper nunc magna, ac tristique arcu tempus vel.</p>
+          <p>The Lego Star Wars projects are interesting because they’re generally in non brick-built environments. Sampling becomes tricky on some of the interiors due to the amount of reflective glossy materials. The explosions were particularly tough because sampling the reflections from the volumes was incredibly slow and noisy. To solve this I converted the heat channel from each of the volumes to a mesh and used the meshes as mesh lights. For these projects I was in charge of shot lighting, rendering, and compositing using the same software listed above.</p>
         </div>
         <div id="breakdown_element">
           <img src="assets/thumbnails/SebRoom.jpg" alt="Sebastian's Room Render" title="Sebastian's Room">
           <h3>Sebastian's Room</h3>
           <h4>Shading, Lighting, Rendering, Comp</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet erat ipsum. Proin aliquet orci luctus fermentum cursus. Vestibulum venenatis maximus ex vitae tincidunt. Vivamus dapibus lectus ut faucibus tincidunt. Cras nec egestas arcu, iaculis vehicula lorem. Aliquam luctus vehicula nisi, sit amet luctus justo. Donec semper nunc magna, ac tristique arcu tempus vel.</p>
+          <p>This project started as a RenderMan 18 project for a short film I worked on in college. The textures were set up for a traditional blinn/phong shading setup so I converted them to a PBR workflow using Substance B2M, Substance Painter, and Photoshop. I shaded, lit, and rendered it using Redshift for Maya and composited it in Blackmagic Fusion. This was a great project to learn more about shading in Redshift, which I was much less familiar with at the offset.</p>
         </div>
         <div id="breakdown_element">
           <img src="assets/thumbnails/StillLife.jpg" alt="Still Life Render" title="Still Life">
           <h3>Still Life</h3>
           <h4>All Aspects Except Fruit Scans</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet erat ipsum. Proin aliquet orci luctus fermentum cursus. Vestibulum venenatis maximus ex vitae tincidunt. Vivamus dapibus lectus ut faucibus tincidunt. Cras nec egestas arcu, iaculis vehicula lorem. Aliquam luctus vehicula nisi, sit amet luctus justo. Donec semper nunc magna, ac tristique arcu tempus vel.</p>
+          <p>This project began with me wanting to learn more about the ray and pixel intensity clamps in Redshift and how they affect the end result. I also ended up learning a bit more about the GI engines, caustics, tone mapping, and texture mip-mapping along the way. I ended up liking the look so I worked on the texture/shaders a bit more and gave it a render. The food scans are free from TurboSquid and _blankRepository. Other than that I did everything else for this project using all the software referenced above.</p>
         </div>
         <div id="breakdown_element">
           <img src="assets/thumbnails/Hydra.jpg" alt="Hydra Renderfarm Screenshot" title="Hydra Renderfarm">
           <h3>Hydra Renderfarm</h3>
           <h4>Programming</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet erat ipsum. Proin aliquet orci luctus fermentum cursus. Vestibulum venenatis maximus ex vitae tincidunt. Vivamus dapibus lectus ut faucibus tincidunt. Cras nec egestas arcu, iaculis vehicula lorem. Aliquam luctus vehicula nisi, sit amet luctus justo. Donec semper nunc magna, ac tristique arcu tempus vel.</p>
+          <p>Project Hydra started as a basic render farm project from Cogswell College. I forked it and built off of it significantly to it to make it into a full-featured render farm software. It is written mostly in Python using PyQt for the frontend and MySQL for the backend. It features most modern render farm features such as queue prioritization, crash/error handling, logging, node scheduling, multiple job types/softwares, etc. Doing this project I learned a ton about Python and it has made me very confident in my Python development skills. It still has a bit to go but with any luck we’ll be using this in production some day.</p>
+        </div>
+        <div id="breakdown_element">
+          <a href="assets/David_DuVoisin_BreakdownSheet.pdf" target="_blank">Download Breakdown as PDF</a>
         </div>
       </div>
 
