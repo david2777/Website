@@ -16,21 +16,12 @@ body {
 img, object, embed, video {
 	max-width: 100%;
 }
-.ie6 img {
-	width: 100%;
-}
 .fluid {
 	clear: both;
 	margin-left: 0;
 	width: 100%;
 	float: left;
 	display: block;
-}
-.fluidList {
-    list-style: none;
-    list-style-image: none;
-    margin: 0;
-    padding: 0;
 }
 .gridContainer {
 	margin-left: auto;
@@ -40,12 +31,6 @@ img, object, embed, video {
 	padding-right: 2.275%;
 	clear: none;
 	float: none;
-}
-.zeroMargin_mobile {
-	margin-left: 0;
-}
-.hide_mobile {
-	display: none;
 }
 #header h1 {
 	font: italic bolder 24pt Verdana, Geneva, sans-serif;
@@ -202,6 +187,9 @@ img, object, embed, video {
 #breakdown_element p{
 	font-size: 8pt;
 }
+#breakdown_element #attr{
+    font-size: 6pt;
+}
 
 /*Resume*/
 #resumeWrapper {
@@ -288,12 +276,6 @@ img, object, embed, video {
 		float: none;
 		margin-left: auto;
 	}
-	.hide_tablet {
-		display: none;
-	}
-	.zeroMargin_tablet {
-		margin-left: 0;
-	}
 	#header {
 		width: 100%;
 	}
@@ -338,6 +320,9 @@ img, object, embed, video {
 	#breakdown_element p{
 		font-size: 10pt;
 	}
+  #breakdown_element #attr{
+      font-size: 8pt;
+  }
 
 	/*Resume*/
 	#resumeWrapper{
@@ -368,12 +353,6 @@ img, object, embed, video {
 		clear: none;
 		float: none;
 		margin-left: auto;
-	}
-	.zeroMargin_desktop {
-	margin-left: 0;
-	}
-	.hide_desktop {
-	display: none;
 	}
 	#header {
 		width: 48.7179%;
