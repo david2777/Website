@@ -21,16 +21,16 @@
   <body>
     <div class="gridContainer clearfix">
       <div id="header" class="fluid">
-        <h1><a href="index.html">David<span style="color:#ed5614;">DuVoisin</span></a></h1>
+        <h1><a href="index.html">David<span class="orangetext">DuVoisin</span></a></h1>
       </div>
 
-      <div id="subheader" class="fluid ">
+      <div id="subheader" class="fluid">
         <h2>Lighting Technical Director</h2>
       </div>
 
-      <div id="nav" class="fluid ">
+      <div id="nav" class="fluid">
         <ul>
-          <li><a href="index.html" style="color:#737373;">Home</a></li>
+          <li><a href="index.html" class="current">Home</a></li>
           <li>|</li>
           <li><a href="resume.html">Resume</a></li>
           <li>|</li>
@@ -38,27 +38,20 @@
         </ul>
       </div>
 
-      <div id="video_wrapper" class="fluid ">
-        <div id="video" class="fluid ">
+      <div id="video_wrapper" class="fluid">
+        <div id="video" class="fluid">
           <iframe src="http://player.vimeo.com/video/225673757?color=ffffff" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
-        <a id="show_hide_button" onclick="show_hide()">Click Here To Show Breakdown</a>
+        <a id="show_hide_button" class="button" onclick="show_hide()">Click Here To Show Breakdown</a>
       </div>
 
-      <div id="breakdown" class="fluid" style="display:none;">
+      <div id="breakdown" class="fluid" style="display: none;">
         <div id="breakdown_element">
           <img src="assets/thumbnails/LegoCity.jpg" alt="Lego City Render" title="Lego City">
           <h3>Lego City</h3>
           <h4>Lighting, Rendering, Comp</h4>
           <p>This Lego City project contained four short sequences, each in a different time of day. I was responsible for the mid-day and night sequences. For these sequences I created light rigs, did shot lighting, rendering, and compositing. For the night sequence light rig I wanted to have lights in each of the 30+ lamps. To make this setup easy I wrote a basic script to find each lamp head and setup the lights and geometry blockers for it. This script also made making changes easy when I had to add/remove lights/blockers. Lighting and rendering were handled in Redshift for Maya. Compositing was done in Blackmagic Fusion.</p>
-          <p id="attr">Image Copyright &copy; The LEGO Group 2017. Courtesy of Doodle Pictures Studio LLC.</p>
-        </div>
-        <div id="breakdown_element">
-          <img src="assets/thumbnails/LegoStarWars.jpg" alt="Lego Star Wars Render" title="Lego Star Wars">
-          <h3>Lego Star Wars</h3>
-          <h4>Lighting, Rendering, Comp</h4>
-          <p>The Lego Star Wars projects are interesting because they’re generally in non brick-built environments. Sampling becomes tricky on some of the interiors due to the amount of reflective glossy materials. The explosions were particularly tough because sampling the reflections from the volumes was incredibly slow and noisy. To solve this I converted the heat channel from each of the volumes to a mesh and used the meshes as mesh lights. For these projects I was in charge of shot lighting, rendering, and compositing using the same software listed above.</p>
-          <p id="attr">Image Copyright &copy; The LEGO Group 2017. Courtesy of Doodle Pictures Studio LLC.</p>
+          <p class="attr">Image Copyright &copy; The LEGO Group 2017. Courtesy of Doodle Pictures Studio LLC.</p>
         </div>
         <div id="breakdown_element">
           <img src="assets/thumbnails/SebRoom.jpg" alt="Sebastian's Room Render" title="Sebastian's Room">
@@ -67,10 +60,17 @@
           <p>This project started as a RenderMan 18 project for a short film I worked on in college. The textures were set up for a traditional blinn/phong shading setup so I converted them to a PBR workflow using Substance B2M, Substance Painter, and Photoshop. I shaded, lit, and rendered it using Redshift for Maya and composited it in Blackmagic Fusion. This was a great project to learn more about shading in Redshift, which I was much less familiar with at the offset.</p>
         </div>
         <div id="breakdown_element">
-          <img src="assets/thumbnails/StillLife.jpg" alt="Still Life Render" title="Still Life">
-          <h3>Still Life</h3>
-          <h4>All Aspects Except Fruit Scans</h4>
-          <p>This project began with me wanting to learn more about the ray and pixel intensity clamps in Redshift and how they affect the end result. I also ended up learning a bit more about the GI engines, caustics, tone mapping, and texture mip-mapping along the way. I ended up liking the look so I worked on the texture/shaders a bit more and gave it a render. The food scans are free from TurboSquid and _blankRepository. Other than that I did everything else for this project using all the software referenced above.</p>
+          <img src="assets/thumbnails/RallyCar.jpg" alt="Lego Rally Car" title="Rally Car">
+          <h3>Lego Rally Car</h3>
+          <h4>All Aspects Except Model and Textures</h4>
+          <p>This project began with me wanting to play with the new Redshift user data attributes and tri-planar projection node. This scene has 4 shaders, opaque plastic, refractive plastic, printed decos, and stickers. The color, texture, roughness, and wear level for the shaders are driven by metadata attached to the model. In the end, this setup caused way more problems than offered solutions so I decided to move on. The lighting was me wanting to test a new system for capturing HDRI's using a 360 camera. This method worked nicely and was much easier than using my DSLR. So I decided to shoot a quick HDRI and backplate and make a little animation using Maya, Redshift, and Nuke.</p>
+        </div>
+        <div id="breakdown_element">
+          <img src="assets/thumbnails/LegoStarWars.jpg" alt="Lego Star Wars Render" title="Lego Star Wars">
+          <h3>Lego Star Wars</h3>
+          <h4>Lighting, Rendering, Comp</h4>
+          <p>The Lego Star Wars projects are interesting because they’re generally in non brick-built environments. Sampling becomes tricky on some of the interiors due to the amount of reflective glossy materials. The explosions were particularly tough because sampling the reflections from the volumes was incredibly slow and noisy. To solve this I converted the heat channel from each of the volumes to a mesh and used the meshes as mesh lights. For these projects I was in charge of shot lighting, rendering, and compositing using the same software listed above.</p>
+          <p class="attr">Image Copyright &copy; The LEGO Group 2017. Courtesy of Doodle Pictures Studio LLC.</p>
         </div>
         <div id="breakdown_element">
           <img src="assets/thumbnails/Hydra.jpg" alt="Hydra Renderfarm Screenshot" title="Hydra Renderfarm">
@@ -79,7 +79,7 @@
           <p>Project Hydra started as a basic render farm project from Cogswell College. I forked it and built off of it significantly to it to make it into a full-featured render farm software. It is written mostly in Python using PyQt for the frontend and MySQL for the backend. It features most modern render farm features such as queue prioritization, crash/error handling, logging, node scheduling, multiple job types/softwares, etc. Doing this project I learned a ton about Python and it has made me very confident in my Python development skills. It still has a bit to go but with any luck we’ll be using this in production some day.</p>
         </div>
         <div id="breakdown_element">
-          <a href="assets/David_DuVoisin_BreakdownSheet.pdf" target="_blank">Download Breakdown as PDF</a>
+          <a href="assets/David_DuVoisin_BreakdownSheet.pdf" class="button" target="_blank">Download Breakdown as PDF</a>
         </div>
       </div>
 
@@ -88,11 +88,11 @@
           <li><a href="mailto:daduvo11@gmail.com"><img src="assets/icons/webicon-mail.svg" alt="Email Icon" title="mailto:daduvo11@gmail.com"></a></li>
           <li><a href="https://www.linkedin.com/in/david2777" target="_blank"><img src="assets/icons/webicon-linkedin.svg" alt="LinkedIn Icon" title="https://www.linkedin.com/in/david2777"></a></li>
           <li><a href="https://github.com/david2777" target="_blank"><img src="assets/icons/webicon-github.svg" alt="GitHub Icon" title="https://github.com/david2777"></a></li>
-          <li><a href="https://vimeo.com/david2777" target="_blank"><img src="assets/icons/webicon-vimeo.svg" alt="Vimeo Icon" title="https://vimeo.com/david2777" style="padding-right: 0px;"></a></li>
+          <li><a href="https://vimeo.com/david2777" target="_blank"><img src="assets/icons/webicon-vimeo.svg" alt="Vimeo Icon" title="https://vimeo.com/david2777" class="icon_end_fix"></a></li>
         </ul>
       </div>
 
-      <div id="foooter" class="fluid ">
+      <div id="foooter" class="fluid">
         Copyright &copy; David DuVoisin 2017
       </div>
     </div>
