@@ -4,18 +4,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>David DuVoisin | Portfolio</title>
-      <link href="assets/boilerplate.css" rel="stylesheet" type="text/css">
-      <link href="style.css" rel="stylesheet" type="text/css">
+      <link href="style_index.css" rel="stylesheet" type="text/css">
       <meta name="author" content="David DuVoisin" />
       <meta name="description" content="Portfolio for David DuVoisin, a Lighting Techincal Artist and Tool Developer working on pre-rendered Animation."/>
       <meta name="keywords" content="David DuVoisin, DuVoisin, David, CG, Animation, CG Artist, Lighting, Lighting Artist, Lighting Technical Artist, Technical Artist, Technical Director, TD, Lighting TD, Lighting Technical Director, Redshift, Fusion, Nuke, Python, Renderman, Maya, VRay, Arnold, Python" />
       <link rel="icon" type="image/png" href="/icon.png"/>
       <!--[if IE]><link rel="SHORTCUT ICON" href="/icon.ico"/><![endif]--><!-- Internet Explorer-->
       <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script async src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
       <![endif]-->
-      <script src="assets/respond.min.js"></script>
-      <script src="assets/show_hide.js"></script>
+      <script async src="assets/respond.min.js"></script>
+      <script async src="assets/show_hide.js"></script>
   </head>
 
   <body>
@@ -87,8 +86,24 @@
       </div>
 
       <div id="foooter" class="fluid">
-        Copyright &copy; David DuVoisin 2017
+        Copyright &copy; David DuVoisin 2018
       </div>
     </div>
+  <noscript id="deferred-styles">
+    <link rel="stylesheet" type="text/css" href="style_index_breakdown.css"/>
+  </noscript>
+  <script>
+    var loadDeferredStyles = function() {
+      var addStylesNode = document.getElementById("deferred-styles");
+      var replacement = document.createElement("div");
+      replacement.innerHTML = addStylesNode.textContent;
+      document.body.appendChild(replacement)
+      addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+    else window.addEventListener('load', loadDeferredStyles);
+  </script>
   </body>
 </html>

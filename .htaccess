@@ -1,0 +1,47 @@
+# ======Compression======
+<IfModule mod_deflate.c>
+    AddOutPutFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript image/svg+xml
+    <IfModule mod_setenvif.c>
+        # Netscape 4.x has some problems...
+        BrowserMatch ^Mozilla/4 gzip-only-text/html
+
+        # Netscape 4.06-4.08 have some more problems
+        BrowserMatch ^Mozilla/4\.0[678] no-gzip
+
+        # MSIE masquerades as Netscape, but it is fine
+        # BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+
+        # NOTE: Due to a bug in mod_setenvif up to Apache 2.0.48
+        # the above regex won't work. You can use the following
+        # workaround to get the desired effect:
+        BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
+
+        # Don't compress images
+        SetEnvIfNoCase Request_URI .(?:gif|jpe?g|png)$ no-gzip dont-vary
+    </IfModule>
+
+    <IfModule mod_headers.c>
+        # Make sure proxies don't deliver the wrong content
+        Header append Vary User-Agent env=!dont-vary
+    </IfModule>
+</IfModule>
+
+
+# ======Caching======
+# 1 MONTHS
+<FilesMatch "\.(jpg|jpeg|png|gif|swf|otf|ico|pdf|flv|svg)$">
+  Header set Cache-Control "max-age=2419200, public"
+  ExpiresDefault "access plus 1 month"
+</FilesMatch>
+
+# 1 WEEK
+<FilesMatch "\.(xml|txt|css|js)$">
+  Header set Cache-Control "max-age=604800, public"
+  ExpiresDefault "access plus 1 week"
+</FilesMatch>
+
+# 30 MINUTES
+<FilesMatch "\.(html|htm|php)$">
+  Header set Cache-Control "max-age=1800, public"
+  ExpiresDefault "access plus 30 minutes"
+</FilesMatch>
