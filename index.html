@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" href="assets/favicon.png"/>
     <script async src="assets/respond.min.js"></script>
     <script async src="assets/show_hide.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@slightlyoff/lite-vimeo@0.1.1/lite-vimeo.js"></script>
 </head>
 
 <body>
@@ -35,12 +36,7 @@
 
     <div id="video_wrapper" class="fluid">
         <div id="video" class="fluid">
-            <div style="padding:56.25% 0 0 0;position:relative;">
-                <iframe src="https://player.vimeo.com/video/225673757?color=ffffff"
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <script src="https://player.vimeo.com/api/player.js"></script>
+            <lite-vimeo videoid="225673757" videotitle="David DuVoisin Lighting Demo Reel Summer 2017"></lite-vimeo>
         </div>
         <a id="show_hide_button" class="button" onclick="show_hide()">Click Here To Show Breakdown</a>
     </div>
@@ -99,10 +95,10 @@
 
     <div id="icon" class="fluid">
         <ul>
-            <li><a href="mailto:daduvo11@gmail.com"><img src="assets/icons/webicon-mail.svg" alt="Email Icon" title="mailto:daduvo11@gmail.com"></a></li>
-            <li><a href="https://www.linkedin.com/in/david2777" target="_blank"><img src="assets/icons/webicon-linkedin.svg" alt="LinkedIn Icon" title="https://www.linkedin.com/in/david2777"></a></li>
-            <li><a href="https://github.com/david2777" target="_blank"><img src="assets/icons/webicon-github.svg"  alt="GitHub Icon" title="https://github.com/david2777"></a></li>
-            <li><a href="https://vimeo.com/david2777" target="_blank"><img src="assets/icons/webicon-vimeo.svg" alt="Vimeo Icon" title="https://vimeo.com/david2777" class="icon_end_fix"></a></li>
+            <li><a href="mailto:daduvo11@gmail.com"><img src="assets/icons/webicon-mail.svg" alt="Email Icon" title="mailto:daduvo11@gmail.com" width="64" height="64"></a></li>
+            <li><a href="https://www.linkedin.com/in/david2777" target="_blank"><img src="assets/icons/webicon-linkedin.svg" alt="LinkedIn Icon" title="https://www.linkedin.com/in/david2777" width="64" height="64"></a></li>
+            <li><a href="https://github.com/david2777" target="_blank"><img src="assets/icons/webicon-github.svg"  alt="GitHub Icon" title="https://github.com/david2777" width="64" height="64"></a></li>
+            <li><a href="https://vimeo.com/david2777" target="_blank"><img src="assets/icons/webicon-vimeo.svg" alt="Vimeo Icon" title="https://vimeo.com/david2777" class="icon_end_fix" width="64" height="64"></a></li>
         </ul>
     </div>
 
