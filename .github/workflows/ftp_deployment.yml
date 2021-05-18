@@ -1,5 +1,5 @@
 on: push
-name: 🚀 FTP Deployment                 
+name: 🚀 FTP Deployment
 jobs:
   web-deploy:
     name: 🎉 Deploy
@@ -14,3 +14,5 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: ./public_html/
+        exclude: .idea/**
+          - "*.md"
