@@ -1,4 +1,3 @@
-# Website
-This is just my personal website.
-
-Check it out at [davidduvoisin.com](http://davidduvoisin.com/).
+# davidduvoisin.com
+My personal website. 
+Check it out at [davidduvoisin.com](https://davidduvoisin.com/).
