@@ -23,7 +23,7 @@ img, object, embed, video {
 	float: left;
 	display: block;
 }
-.gridContainer {
+.grid_container {
 	margin-left: auto;
 	margin-right: auto;
 	width: 86.45%;
@@ -32,13 +32,13 @@ img, object, embed, video {
 	clear: none;
 	float: none;
 }
-.orangetext {
+.orange_text {
 	color: #ed5614;
 }
 #header h1 {
 	font: italic bolder 24pt Verdana, Geneva, sans-serif;
 	letter-spacing: -1.5px;
-	padding: 5px 0px 0px 0px;
+	padding: 5px 0 0 0;
 	color: #323232;
 }
 #header a {
@@ -112,7 +112,7 @@ a.button:active {
 	padding-top: 15px;
 }
 #icon ul {
-	list-style-type: none;1
+	list-style-type: none;
 	display: inline;
 	list-style-position: inside;
 }
@@ -126,9 +126,9 @@ a.button:active {
 	width: 15%;
 }
 img.icon_end_fix {
-	padding-right: 0px;
+	padding-right: 0;
 }
-#foooter {
+#footer {
 	padding-top: 25px;
 	text-align: right;
 	font: normal normal 10pt Verdana, Geneva, sans-serif;
@@ -158,13 +158,13 @@ img.icon_end_fix {
 /*End Index*/
 
 /*Breakdown*/
-#breakdown_element{
+.breakdown_element {
 	padding-top: 25px;
 	display: inline-block;
 	vertical-align: top;
 }
 
-#breakdown_element img{
+.breakdown_element img {
 	width: 25%;
 	padding-right: 15px;
 	display: inline;
@@ -172,37 +172,37 @@ img.icon_end_fix {
 	float: left;
 }
 
-#breakdown_element h3,h4,p{
+.breakdown_element h3,h4,p {
 	display: block;
 	margin: 0;
 }
 
-#breakdown_element h3{
+.breakdown_element h3 {
 	font-size: 12pt;
 	font-style: italic;
 	font-weight: bold;
 }
 
-#breakdown_element h4{
+.breakdown_element h4 {
 	font-size: 	10pt;
 	padding-left: 30%;
 }
 
-#breakdown_element p{
+.breakdown_element p {
 	font-size: 8pt;
 }
-#breakdown_element .attr{
+.breakdown_element .attr {
     font-size: 6pt;
 }
 /*End Breakdown*/
 
 
 /*Resume*/
-#resumeWrapper {
+#resume_wrapper {
 	width: 100%;
 	margin: 0 auto;
 	float: none;
-	padding: 10px 0px;
+	padding: 10px 0;
 	border: 2px solid #000000;
 }
 #resume {
@@ -211,37 +211,37 @@ img.icon_end_fix {
 	font-family: Verdana, Geneva, sans-serif;
 	float: none;
 }
-#resumeHeader {
+#resume_header {
 	text-align: center;
 }
-#resumeTable {
+.resume_table {
 	width: 100%;
 	margin: 0 auto;
 	float: none;
 	padding-bottom: 25px;
 }
-#resumeTable table {
+.resume_table table {
 	width: 100%;
-	border: 0px;
+	border: 0;
 }
-#resumeExperience {
+.resume_experience {
   width: 100%;
-  border: 0px;
+  border: 0;
   padding-bottom: 10px;
 }
-#resumeExperience ul {
+.resume_experience ul {
   margin: 0;
   padding-bottom: 15px;
   padding-left: 55px;
 }
-#resumeExperience li {
+.resume_experience li {
   padding-top: 2px;
   padding-bottom: 2px;
 }
-#resumeExperience p.date {
+.resume_experience p.date {
   font-size: 10pt;
 }
-#resumeEduTable {
+.resume_edu_table {
 	padding-left: 20px;
 }
 /*End Resume*/
@@ -270,7 +270,7 @@ img.icon_end_fix {
 
 @media only screen and (min-width: 481px) {
 	/*All*/
-	.gridContainer {
+	.grid_container {
 		width: 89.9%;
 		padding-left: 1.55%;
 		padding-right: 1.55%;
@@ -284,7 +284,7 @@ img.icon_end_fix {
 	#header h1 {
 		font: italic bolder 36pt Verdana, Geneva, sans-serif;
 		letter-spacing: -1.5px;
-		padding: 12px 0px 0px 0px;
+		padding: 12px 0 0 0;
 	}
 	#subheader {
 		width: 65.5172%;
@@ -318,26 +318,26 @@ img.icon_end_fix {
 
 
   /*Breakdown*/
-	#breakdown_element h3{
+	.breakdown_element h3{
 		font-size: 14pt;
 		font-style: italic;
 		font-weight: bold;
 	}
-	#breakdown_element h4{
+	.breakdown_element h4{
 		font-size: 	12pt;
 	}
-	#breakdown_element p{
+	.breakdown_element p{
 		font-size: 10pt;
 	}
-	#breakdown_element .attr{
+	.breakdown_element .attr{
     font-size: 8pt;
 	}
   /*End Breakdown*/
 
 
 	/*Resume*/
-	#resumeWrapper{
-		padding: 25px 0px;
+	#resume_wrapper{
+		padding: 25px 0;
 	}
   /*End Resume*/
 
@@ -358,7 +358,7 @@ img.icon_end_fix {
 
 @media only screen and (min-width: 769px) {
 	/*All*/
-	.gridContainer {
+	.grid_container {
 		width: 87.75%;
 		max-width: 1232px;
 		padding-left: 1.125%;
@@ -366,7 +366,6 @@ img.icon_end_fix {
 		margin: auto;
 		clear: none;
 		float: none;
-		margin-left: auto;
 	}
 	#header {
 		width: 48.7179%;
@@ -374,7 +373,7 @@ img.icon_end_fix {
 	#header h1 {
 		font: italic bolder 40pt Verdana, Geneva, sans-serif;
 		letter-spacing: -1.5px;
-		padding: 17px 0px 0px 0px;
+		padding: 17px 0 0 0;
 	}
 	#subheader {
 		width: 48.7179%;
@@ -406,30 +405,30 @@ img.icon_end_fix {
 
 
   /*Breakdown*/
-	#breakdown_element h3{
+	.breakdown_element h3{
 		font-size: 16pt;
 		font-style: italic;
 		font-weight: bold;
 	}
-	#breakdown_element h4{
+	.breakdown_element h4{
 		font-size: 	14pt;
 	}
-	#breakdown_element p{
+	.breakdown_element p{
 		font-size: 12pt;
 	}
   /*End Breakdown*/
 
 
 	/*Resume*/
-	#resumeWrapper{
+	#resume_wrapper{
 		width: 75%;
-		padding: 50px 0px;
+		padding: 50px 0;
 	}
-	#resumeTable {
+	.resume_table {
 		width: 95%;
 		margin: 0 auto;
 	}
-  #resumeExperience {
+  .resume_experience {
     width: 95%;
     margin: 0 auto;
   }
